@@ -1,9 +1,20 @@
-import React from 'react'
+import DashboardHero from "../components/Dashboard/DashboardHero";
+import CareerRoadmapPreview from "../components/Dashboard/CareerRoadmapPreview";
+import QuickActions from "../components/Dashboard/QuickActions";
+import RecommendedCourses from "../components/Dashboard/RecommendedCourses";
 
-function Dashboard() {
+
+const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <>
+    <div className="space-y-12">
+      <DashboardHero />
+    </div>
+      <CareerRoadmapPreview/>
+      <QuickActions/>
+      <RecommendedCourses/>
+      </>
+  );
+};
 
-export default Dashboard
+export default Dashboard;
