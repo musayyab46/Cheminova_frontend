@@ -1,11 +1,16 @@
 import React from "react";
 import FeatureCard from "../components/FeatureCard";
 import { Compass, Map, ArrowUpRight, Target } from "lucide-react";
+import {useNavigate} from "react-router-dom"
 
 // Optional team member images
 import Member1 from "../assets/member1.avif";
 
 const AboutPage = () => {
+const navigate=useNavigate();
+  const handleClick=()=>{
+    navigate("/generatePath");
+  }
   const features = [
     {
       icon: Compass,
@@ -41,7 +46,7 @@ const AboutPage = () => {
     },
     {
       name: "Sujal Chauhan",
-      role: "Devops Specialist",
+      role: "Frontend developer",
       image: Member1,
     },
     {
@@ -122,7 +127,7 @@ const AboutPage = () => {
         <p className="text-sm sm:text-base md:text-lg mb-6 max-w-2xl mx-auto">
           Start your journey today and let AI guide you to the career of your dreams.
         </p>
-        <button className="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+        <button className="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition" onClick={handleClick}>
           Get Started
         </button>
       </section>

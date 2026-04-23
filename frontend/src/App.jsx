@@ -68,6 +68,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
+import Generatedpath from "./pages/Generatedpath";
 
 function AppLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -168,6 +169,15 @@ function AppLayout() {
                   <Pathgenerator />
                 </ProtectedRoute>
               }
+
+            />
+            <Route
+            path="/generatedPath"
+            element={
+              <ProtectedRoute>
+                <Generatedpath/>
+              </ProtectedRoute>
+            }
             />
 
           </Routes>

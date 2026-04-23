@@ -10,6 +10,7 @@ import {
   BookOpen,
   Info,
   Sparkles,
+  Route
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -37,6 +38,7 @@ export default function Sidebar() {
     { name: "Courses", path: "/courses", icon: <BookOpen size={20} /> },
     { name: "About Us", path: "/about", icon: <Info size={20} /> },
     { name: "Profile", path: "/profile", icon: <User size={20} /> },
+    { name: "Generated Path", path:"/generatedPath",icon:<Route size={20}/>},
     { name: "Features", path: "/features", icon: <Sparkles size={20} /> },
 
     // 🔴 Logout as action (not route)
