@@ -16,7 +16,7 @@ const Dashboard = () => {
   const data = res.data;
 
   if (data && data.length > 0) {
-    const latest = data[0]; // or data[data.length - 1] if needed
+    const latest = data[data.length-1]; // or data[data.length - 1] if needed
 
     // 🔥 Dynamic sentence generator (no hardcoding)
     const actions = [

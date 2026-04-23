@@ -8,12 +8,12 @@ const Generatedpath = () => {
 
  const fetchCareers = async () => {
   try {
-    const res = await API.get("/user/all-generated-path");
+    const res = await API.get("/user/generated-path");
 
     console.log("API RESPONSE:", res.data);
 
     // ✅ Extract careers from paginated response
-    setCareers(res.data?.content || []);
+    setCareers(res.data || []);
 
   } catch (error) {
     console.error("Error fetching careers:", error);
